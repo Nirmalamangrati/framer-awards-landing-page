@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+}
+.firstcontainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
+}
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+.logo {
+  font-size: 22px;
+  margin-top: 20px;
+}
+.firstcontainer a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 30px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: black;
+  padding: 10px 0;
+  border-radius: 8px;
+  min-width: 140px;
+}
+.dropdown-menu li {
+  list-style: none;
+}
+.dropdown-menu li a {
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  padding: 8px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: rgba(13, 13, 13);
+  border-radius: 10px;
+}
+.dropdown-menu li a:hover {
+  background-color: #555;
+  height: 40px;
+  border-radius: 5px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeSlideDown 0.3s ease backwards;
+}
+#dashboard {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 70px;
+  border-radius: 30px;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 500%;
+}
+.hero h1 {
+  font-size: 300px;
+  letter-spacing: 2px;
+  font-family: "Luxurious Script", cursive;
+}
+.hero h2 {
+  font-size: 160px;
+  margin-top: -100px;
+}
+
+.script {
+  align-items: center;
+}
+.title {
+  align-items: center;
+}
+.hero p {
+  align-items: center;
+  font-size: 28px;
+  color: gray;
+}
+.hero a {
+  margin-left: 45px;
+}
+.buttons {
+  margin-top: -35px;
+}
+.btnlight {
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  height: 40px;
+  width: 140px;
+  font-weight: bold;
+}
+.btnlight:hover {
+  background-color: rgb(227, 225, 225);
+  color: black;
+  transform: scale(1.05);
+}
+.btndark {
+  border-radius: 30px;
+  background-color: rgba(26, 26, 26);
+  color: white;
+  height: 40px;
+  width: 150px;
+  font-weight: bold;
+  border: none;
+}
+.btndark:hover {
+  background-color: rgb(15, 13, 13);
+  color: white;
+  transform: scale(1.05);
+}
+
+.hero h1,
+.hero h2,
+.hero p,
+.buttons button {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlide 1s ease-out forwards;
+}
+.hero p {
+  animation-delay: 0.4s;
+}
+.hero .buttons button {
+  animation-delay: 0.5s;
+}
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
