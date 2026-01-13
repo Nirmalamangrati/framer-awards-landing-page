@@ -18,20 +18,15 @@ body {
   justify-content: space-around;
   z-index: 10;
 }
-.navigation {
-  display: flex;
-  gap: 20px;
-}
+
 .logo {
   font-size: 22px;
   margin-top: 20px;
 }
 .firstcontainer a {
   text-decoration: none;
-  color: #cfcfcf;
+  color: gray;
   font-size: 14px;
-  font-weight: 500;
-  gap: 30px;
 }
 .dropdown {
   position: relative;
@@ -71,7 +66,6 @@ body {
 }
 #dashboard {
   font-size: 14px;
-  font-weight: 500;
   background-color: white;
   color: black;
   height: 30px;
@@ -164,4 +158,81 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.nav-drop {
+  position: relative;
+  display: inline-block;
+}
+.dropdownmenoo {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 250px;
+  border-radius: 15px;
+  z-index: 100;
+}
+.listheight {
+  display: flex;
+  padding: 10px 16px;
+  justify-content: space-between;
+}
+.listheight i {
+  display: flex;
+  color: white;
+  padding: 8px 15px;
+  text-align: left;
+  align-items: left;
+}
+.dropdownmenoo li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: white;
+}
+.nav-drop li p {
+  display: flex;
+  padding: 8px 15px;
+  color: gray;
+}
+
+.dropdownmenoo li p:hover {
+  color: white;
+}
+.nav-drop:hover .dropdownmenoo {
+  display: block;
+}
+.dashboardd {
+  text-decoration: none;
+  color: #f8e8e8;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.list {
+  line-height: 0.3;
+}
+.ai-text {
+  display: flex;
+  justify-content: left;
+}
+
+.ai-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+.ai-icon:hover {
+  background-color: white;
+  color: #000;
 }
