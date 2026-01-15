@@ -236,3 +236,7 @@ body {
   background-color: white;
   color: #000;
 }
+.second-part {
+  display: flex;
+  justify-content: space-between;
+}
